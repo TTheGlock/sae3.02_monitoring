@@ -1,1 +1,2 @@
 psutil==5.9.6 
+    #via https://pypi.org/project/psutil/
