@@ -18,20 +18,26 @@ version = platform.version()  #ex : #1 SMP PREEMPT_DYNAMIC Fri Oct 20 15:53:48 U
 cpu_intervalles = 5
 cpu_charge = str(psutil.cpu_percent(interval=cpu_intervalles))
 
-#----- Disque -----
+#----- Mémoire RAM -----
+
+ram_total = psutil.virtual_memory().total / (2**30)
+
+print(ram_total, -3)
+
+#----- Mémoire Disque -----
 
 lettres = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
 
 if systeme == "Linux":
-    total, used, free = shutil.disk_usage("/")
+    disque_total, disque_used, disque_free = shutil.disk_usage("/")
 elif systeme == "Windows":
     for lettre in lettres:
-        total, used, free = shutil.disk_usage(f"{lettre}:\\")    
+        disque_total, disque_used, disque_free = shutil.disk_usage(f"{lettre}:\\")    
 
-total_gb = total // (2**30)  #transformation de bits en gigabits
-used_gb = used // (2**30)  #//
-free_gb = free // (2**30)  #//
-en_tout = used_gb/total_gb*100
+disque_total_gb = disque_total // (2**30)  #transformation de bits en gigabits
+disque_used_gb = disque_used // (2**30)  #//
+disque_free_gb = disque_free // (2**30)  #//
+en_tout = disque_used_gb/disque_total_gb*100
 
 #----- Réseau -----
 

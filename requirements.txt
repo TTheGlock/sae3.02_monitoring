@@ -6,3 +6,5 @@ platform==1.0.8
     #via python>=3.11
 shutil==?
     #via python>=3.11
+socket==?
+    #via python>=3.11
