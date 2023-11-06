@@ -20,10 +20,13 @@ cpu_charge = str(psutil.cpu_percent(interval=cpu_intervalles))
 
 #----- Disque -----
 
+lettres = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
+
 if systeme == "Linux":
     total, used, free = shutil.disk_usage("/")
 elif systeme == "Windows":
-    total, used, free = shutil.disk_usage("C:\\")    
+    for lettre in lettres:
+        total, used, free = shutil.disk_usage(f"{lettre}:\\")    
 
 total_gb = total // (2**30)  #transformation de bits en gigabits
 used_gb = used // (2**30)  #//
@@ -32,5 +35,5 @@ en_tout = used_gb/total_gb*100
 
 #----- Réseau -----
 
-adresse_mac = str(getmac.get_mac_address())
+adresse_mac = str(getmac.get_mac_address())  #ipv6 locale
 adresse_ip = socket.gethostbyname(socket.gethostname()) #ipv4 locale
