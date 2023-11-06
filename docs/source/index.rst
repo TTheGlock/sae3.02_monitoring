@@ -1,14 +1,22 @@
-.. SAE 3.02 documentation master file, created by
-   sphinx-quickstart on Wed Oct 11 16:54:25 2023.
+.. test_sphinx documentation master file, created by
+   sphinx-quickstart on Sat Dec  4 10:20:32 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to SAE 3.02's documentation!
-====================================
+SAÉ 15 - Traiter des données
+=======================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Objectif général de la SAÉ
+
+
+
+   :caption: Objectifs et cahiers des charges
+
+   content/objectifs
+   content/cahier_des_charges
+   content/code
 
 
 
