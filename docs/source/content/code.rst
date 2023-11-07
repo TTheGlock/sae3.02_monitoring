@@ -1,11 +1,11 @@
 Documentation du code
 *********************
 
-.. automodule:: sae3.02-monitoring
+.. automodule:: sae302-monitoring
 
 
 Module 1
 ========================
 
-.. automodule:: sae3.02-monitoring.module1
+.. automodule:: sae302-monitoring.module1
    :members:
