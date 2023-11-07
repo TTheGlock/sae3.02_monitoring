@@ -84,7 +84,7 @@ class DashboardApp(QWidget):
         """
         # Exécute le script test.py pour obtenir les informations
         start_time = time.time()
-        result = subprocess.run(["/home/khoung01/Téléchargements/test.py"], capture_output=True, text=True)
+        result = subprocess.run(["test/test.py"], capture_output=True, text=True)
         end_time = time.time()
         
         #Exécution du code en cas d'exécution réussie du script
@@ -104,7 +104,7 @@ def main():
     app = QApplication(sys.argv)
     window = DashboardApp()
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
 
 if __name__ == '__main__':
     main()
