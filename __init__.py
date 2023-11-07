@@ -7,5 +7,3 @@
                   BA Abdourahmane <abdourahmane.ba@etu.univ-poitiers.fr>
 
 """
-
-import module1

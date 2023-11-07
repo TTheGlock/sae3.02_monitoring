@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-SAÉ 15 - Traiter des données
+SAE 3.02 - Monitoring
 =======================================
 
 .. toctree::
