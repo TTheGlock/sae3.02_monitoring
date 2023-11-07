@@ -7,8 +7,8 @@ Created on Mon Nov  6 15:04:42 2023
 """
 #Importation des modules utiles à la compilation du code
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton
-from PyQt5.QtCore import QTimer
+from PyQt6.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton
+from PyQt6.QtCore import QTimer
 import subprocess
 import time
 
