@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'SAE 3.02 - Monitoring'
-copyright = '2023, Maxence LECHEVALLIER-COUSSOT, Enzo CECOTTI, Colin ROUSSELOT, Charbel HOUNGBO, Abdourahmane BA'
-author = 'Maxence LECHEVALLIER-COUSSOT, Enzo CECOTTI, Colin ROUSSELOT, Charbel HOUNGBO, Abdourahmane BA'
+copyright = '2023, LECHEVALLIER-COUSSOT Maxence, CECOTTI Enzo, ROUSSELOT Colin, HOUNGBO Charbel, BA Abdourahmane'
+author = 'LECHEVALLIER-COUSSOT Maxence, CECOTTI Enzo, ROUSSELOT Colin, HOUNGBO Charbel, BA Abdourahmane'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
