@@ -58,42 +58,42 @@ Organisation des séances de travail
   
 * Les séances se dérouleront conformément au planning suivant :
 
- +--------------+------------------------+--------------------------------------------------+
- | semaine 42   | 1h de cours encadré    | Présentation de la SAÉ et répartition des sujets |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 44   | 3h de TP en autonomie  | Recherche sur les VCS et modules Python dédiés   |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 45   | 1,5h de TD encadré     | Prise en main de Git et GitHub                   |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 46   | 4h de TP en autonomie  |                                                  |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 47   | 4h de TP en autonomie  |                                                  |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 48   | 2h de TP encadré       | Suivi des projets                                |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 49   | 4h de TP en autonomie  |                                                  |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 1    | 4h de TP encadré       | Suivi des projets  - Sphinx                      |
- +--------------+------------------------+--------------------------------------------------+
- | semaine 2    | 4h de TP encadré       | Remise des livrables finaux                      |
- +--------------+------------------------+--------------------------------------------------+
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 41   | 1h de cours encadré    | Présentation de la SAÉ et répartition des sujets                   |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 41   | 4h de TP en autonomie  | Mise en place de l’environnement de développement (GitHub, sphinx) |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 44   | 2h de TD encadré       | Programmation réseau et thread en Python                           |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 45   | 7h de TP en autonomie  | Dessin interface(s) - diagrammes de classes UML - Planning         |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 45   | 2h de TP en autonomie  | Suivi des projets                                                  |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 46   | 4h de TP encadré       |                                                                    |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 48   | 2h de TP en autonomie  |                                                                    |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 49   | 3h de TP encadré       |                                                                    |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 50   | 8h de TP encadré       |                                                                    |
+ +--------------+------------------------+--------------------------------------------------------------------+
+ | semaine 51   | 2h de TP encadré       | Remise des livrables finaux                                        |
+ +--------------+------------------------+--------------------------------------------------------------------+
  
-
 * Les séances en autonomie se feront **en présentiel à l'IUT** dans des salles mises à votre disposition ;
 
 * Pour partie en autonomie, il vous sera demandé régulièrement une restitution de vos travaux sous forme de livrables. Cela permettra à l'enseignant qui encadre le projet de contrôler l'avancée de la réalisation du projet ;   
 
 * En dehors de séances encadrées, cela sera à vous de solliciter l'enseignant encadrant si vous avez besoin d'aide.
 
-
 Évaluation
 ============
 
 Vous aurez un certain nombre de livrables à rendre qui permettront à l'enseignant de vous évaluer :
  * les livrables finaux :
-    * codes informatiques
+    * codes informatiques (clone dépôt GitHub)
     * rapport technique avec tutoriel d'installation et d'utilisation
-    * démonstration technique commentée
+    * démonstration technique commentée et questions
       
  *  des livrables intermédiaires qui vous seront demandés régulièrement afin de mettre à l'enseignant de contrôler la conformité de l'avancée des travaux
   
