@@ -105,6 +105,6 @@ Vous aurez un certain nombre de livrables à rendre qui permettront à l'enseign
 Schéma synthétique de la SAÉ
 ===================================
 
-     .. image:: ../_static/images/Diagramme_SAE.png
+     .. image:: ../_static/Diagramme_SAE.png
 	 :width: 600
 	 :alt: Diagramme de la SAÉ    
