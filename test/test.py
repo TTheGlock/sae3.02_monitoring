@@ -5,13 +5,29 @@ Created on Mon Nov  6 15:04:21 2023
 
 @author: khoung01
 """
-
+#Importation des modules
 import sys
 import socket
 import os
 import psutil 
 
+#Définition du module qui récupère les données. Il faut noter que c'est propre à psutil .
 def get_system_info():
+    """
+    Récupère les infos spécifiques à une machine
+    
+    L'utilisateur n'a pas grand chose à faire.
+    Il exécute le script et les modules os, sys et psutil et leurs attributs récupèrent les infos.
+    
+    Returns:
+       hostname:string 
+       os_info:string
+       cpu_usage:float
+       memory_usage:float
+       disk_usage:float
+    
+    """
+    
     hostname = socket.gethostname()
     os_info = f"{sys.platform} {os.name}"
     cpu_usage = f"{psutil.cpu_percent(interval=1)}%"
