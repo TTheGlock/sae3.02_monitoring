@@ -4,30 +4,30 @@ Objectifs
 
 Présentation
 =============
-L'objectif principal de cette SAÉ est de vous confronter à une problématique professionnelle que vous serez amenés à rencontrer en tant que technicien R&T.
-Ce problème devra être résolu à l'aide d'un programme ou d'un ensemble de programmes et sera pour vous l'occasion de réaliser votre premier projet de développement informatique R&T.
 
-Ce projet comporte les étapes générales suivantes :
- * la collecte des données
- * leur traitement afin d'en extraire une représentation exploitable/parlante
- * et leur publication sous la forme d'une présentation synthétique ou tableau de bord
+L’objectif principal de cette SAÉ est de vous confronter à une problématique professionnelle que vous serez amenés à rencontrer en tant que technicien R&T. Ce problème devra être résolu à l’aide d’un programme ou d’un ensemble de programmes et sera pour vous l’occasion de réaliser votre premier projet de développement informatique R&T.Ce problème devra être résolu à l'aide d'un programme ou d'un ensemble de programmes et sera pour vous l'occasion de réaliser votre premier projet de développement informatique R&T.
 
-Toutes ces étapes devront être automatisées et vous devrez avoir au préalable préparé un environnement de travail afin de réaliser le projet.
-
-
+**Ce projet comporte les étapes générales suivantes :**
+ * analyse d’un cahier des charges et répondre à celui-ci en mentionnant les technologies à utiliser et éventuellement leur impact environnemental et économique
+ * développer une application client/serveur graphique, mobile ou web
+ * utiliser un ou plusieurs moyens d’authentification
+ * sauvegarder les données échangées
+ * générer une documentation technique et commenter du code en français ou en anglais
+ * présentation de la solution en argumentant les choix opérés  
 
 Contexte de réalisation
 ========================
 
-* Pour réaliser le travail demandé dans le cadre de cette SAÉ, vous intègrerez une équipe de deux à trois étudiants maximum ;
+* Pour réaliser le travail demandé dans le cadre de cette SAÉ, vous intègrerez une équipe de quatre étudiants maximum ;
 
-* Le cahier des charges définit les caractéristiques fonctionnelles et techniques du projet ; il est donné par l'enseignant responsable ;
+* Le cahier des charges définit les caractéristiques fonctionnelles et techniques du projet ; il est donné par l’enseignant responsable ;
 
-* Pour réaliser se projet vous pourrez vous appuyez sur différentes ressources :
+* **Pour réaliser se projet vous pourrez vous appuyez sur différentes ressources :**
    * les ressources R106 à R111 et la ressource R115 du programme national,
-   * les enseignants des ressources concernés,
+   * les ressources R2.06 à R2.11 du programme national,
+   * les ressources R3.08 à R3.15 du programme national,
+   * l’enseignant qui encadre le projet,
    * votre équipe de projet,
-   * l'enseignant encadrant,
    * des documents fournis par l'enseignant encadrant,
    * des ressources externes : web, livres...
 
@@ -35,30 +35,26 @@ Contexte de réalisation
   
   * vous auto-évaluer sur différents apprentissages :
     
-    * Utiliser un système informatique et ses outils,
+    * Travailler en équipe pour développer ses compétences professionnelles,
       
-    * Lire, exécuter, corriger et modificer un programme,
+    * Capacité à questionner un cahier des charges R&T,
       
-    * Traduire un algorithme dans un langage et pour un environnement donné,
+    * Développer une application à partir d’un cahier des charges,
       
-    * Connaître l'architecture et les technologies d'un site Web,
+    * Utiliser un protocole réseau pour programmer une application client/serveur,
       
-    * Choisir un mécanisme de gestion de données adaptés au développement de l'outils,
+    * Installer, administrer un système de gestion de données,
       
-    * S'intégrer dans un environnement propice au développement et travail collaboratif,
+    * Accèder à un ensemble données depuis une application et/ou un site web,
       
   * compléter votre portefolio
-
- 
-
 
 Organisation des séances de travail
 ===================================
 
 * Le projet comportera :
-  * des séances de travail encadrées : 1h de cours, 1,5h de TD, 4h de TP et 2h de restitution et démonstration des projets,
-
-  * des séances en autonomie : 15h de TP,
+  * des séances de travail encadrées : 1h de cours, 4h de TP encadré, 2h de restitution et démonstration des projets,
+  * des séances en autonomie : 30h de TP,
   
 * Les séances se dérouleront conformément au planning suivant :
 

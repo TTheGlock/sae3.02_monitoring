@@ -1,6 +1,6 @@
 __version__ = '0.1.0'
 
-""" Mon projet.
+""" SAE 3.02 - Monitoring.
 
 .. moduleauthor:: LECHEVALLIER-COUSSOT Maxence <maxence.lechevallier.coussot@etu.univ-poitiers.fr>
                   CECOTTI Enzo <enzo.cecotti@etu.univ-poitiers.fr>
