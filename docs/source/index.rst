@@ -13,6 +13,10 @@ SAE 3.02 - Monitoring
    content/objectifs
    content/cahier_des_charges
    content/code
+   
+   :caption: Configuration
+   
+   content/preinstallation
 
 
 
