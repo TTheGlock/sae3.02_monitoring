@@ -2,9 +2,9 @@
 Préinstallation
 =============================================
 
-
+--------------------------------------------
 Modules Python
-=============
+--------------------------------------------
 
 .. warning::
 
@@ -37,9 +37,9 @@ Modules Python
 * ``socket``
     - déjà installé de base avec python>=3.11
 
-
+--------------------------------------------
 Ajout du dossier principal au PATH
-=============
+--------------------------------------------
 
 Dans le fichier `.bashrc` du répertoire personnel, il faut ajouter la ligne suivante : 
 

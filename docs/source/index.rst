@@ -20,6 +20,12 @@ SAE 3.02 - Monitoring
    
    content/preinstallation
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Documentation
+
+   content/postgresql
+
 
 
 Indices and tables
