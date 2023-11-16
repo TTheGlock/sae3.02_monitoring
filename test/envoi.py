@@ -9,13 +9,14 @@ import sys
 import psutil
 import platform
 import socket
+import netifaces as ni
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton
 
 class ClientWidget(QWidget):
     def __init__(self):
         super(ClientWidget, self).__init__()
 
-        self.server_address = ('127.0.0.1', 12345)  # Adresse et port du serveur
+        self.server_address = ('192.168.89.98', 12345)  # Adresse et port du serveur
         self.client_socket = None
 
         self.init_ui()
@@ -46,6 +47,7 @@ class ClientWidget(QWidget):
                 "os": platform.system(),
                "version": platform.version(),
                "hostname": platform.node(),
+               "ip_address": ni.ifaddresses['een1'][ni.AF_INET][0]['addr'],
                 "cpu": psutil.cpu_percent(),
                 "memory": psutil.virtual_memory().percent,
                 "disk": psutil.disk_usage('/').percent
