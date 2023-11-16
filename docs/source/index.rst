@@ -13,7 +13,9 @@ SAE 3.02 - Monitoring
    content/objectifs
    content/cahier_des_charges
    content/code
-   
+
+.. toctree::
+   :maxdepth: 1
    :caption: Configuration
    
    content/preinstallation
