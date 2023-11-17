@@ -60,6 +60,7 @@ La table devra accueillir, dans l'ordre :
 
     CREATE TABLE machines (
         id SERIAL,
+        ip_addr varchar(15) NOT NULL,
         operating_system varchar(50) NOT NULL,
         system_version varchar(50) NOT NULL,
         name varchar(50) NOT NULL,
