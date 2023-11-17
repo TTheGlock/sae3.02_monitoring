@@ -59,7 +59,7 @@ La table devra accueillir, dans l'ordre :
 .. code-block:: sql
 
     CREATE TABLE machines (
-        id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        id SERIAL,
         operating_system varchar(50) NOT NULL,
         system_version varchar(50) NOT NULL,
         name varchar(50) NOT NULL,
@@ -72,4 +72,4 @@ Puis pour donner certains droits sur la table ``machines`` à l'utilisateur ``ap
 
 .. code-block:: sql
 
-    GRANT SELECT, INSERT, UPDATE, DELETE, CONNECT, REFERENCES ON sae302-monitoring TO machines;
+    GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES ON machines TO application;
