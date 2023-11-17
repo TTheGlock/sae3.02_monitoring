@@ -59,7 +59,7 @@ La table devra accueillir, dans l'ordre :
 .. code-block:: sql
 
     CREATE TABLE machines (
-        id SERIAL,
+        id SERIAL NOT NULL,
         ip_addr varchar(15) NOT NULL,
         operating_system varchar(50) NOT NULL,
         system_version varchar(50) NOT NULL,
