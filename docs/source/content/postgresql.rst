@@ -83,4 +83,4 @@ Exemple d'insertion dans la table ``machines`` :
 
 .. code-block:: sql
 
-    INSERT INTO machines VALUES (DEFAULT, '192.168.1.39', 'Linux', '2.4.19', 'PC de Colin', '58,88', ';
+    INSERT INTO machines VALUES (DEFAULT, '192.168.1.39', 'Linux', '2.4.19', 'PC de Colin', 58.88, 46.96, 32.00);
