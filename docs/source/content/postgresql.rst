@@ -28,7 +28,7 @@ Création d'un utilisateur pour l'application
     CREATE USER application WITH PASSWORD 'gtrnet';
 
 --------------------------------------------
-Création et Utilisation de la BD PostgreSQL
+Création et utilisation de la BD PostgreSQL
 --------------------------------------------
 
 Pour créer la base de données PostgreSQL sur une de nos VMs : 
