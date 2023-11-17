@@ -25,7 +25,7 @@ Création d'un utilisateur pour l'application
 
 .. code-block:: sql
 
-    CREATE USER application WITH PASSWORD 'gtrnet' SELECT INSERT UPDATE DELETE CONNECT REFERENCES
+    CREATE USER application WITH PASSWORD 'gtrnet';
 
 --------------------------------------------
 Création et Utilisation de la BD PostgreSQL
@@ -34,8 +34,8 @@ Création et Utilisation de la BD PostgreSQL
 Pour créer la base de données PostgreSQL sur une de nos VMs : 
 
 .. code-block:: sql
-			
-	CREATE DATABASE sae302-monitoring OWNER application;
+
+	CREATE DATABASE sae302_monitoring OWNER application;
 
 Pour utiliser cette base de données : 
 
@@ -67,3 +67,9 @@ La table devra accueillir, dans l'ordre :
         ram_charge float NOT NULL,
         disk_charge float NOT NULL
     );
+
+Puis pour donner certains droits sur la table ``machines`` à l'utilisateur ``application`` : 
+
+.. code-block:: sql
+
+    GRANT SELECT, INSERT, UPDATE, DELETE, CONNECT, REFERENCES ON sae302-monitoring TO machines;
