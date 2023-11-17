@@ -2,6 +2,10 @@
 Documentation PostgreSQL
 =============================================   
 
+.. note:: 
+
+    Cette documentation retrace seulement les commandes effectuées pour la partie PostgreSQL (exemple : création des tables, mise en place d'utilisateurs...).
+
 --------------------------------------------
 Création et Utilisation de la BD PostgreSQL
 --------------------------------------------
@@ -9,12 +13,12 @@ Création et Utilisation de la BD PostgreSQL
 Pour se connecter à PostgreSQL :
 
 .. code-block:: bash
-			
-	sudo -u posgres -i
+	
+    sudo -u posgres -i
     psql 
 
 .. code-block:: sql
-    
+
     ALTER USER postgres PASSWORD 'gtrnet';
 
 Pour créer la base de données PostgreSQL sur une de nos VMs : 
@@ -34,6 +38,7 @@ Création de la table principale : ``machines``
 --------------------------------------------
 
 La table devra accueillir, dans l'ordre : 
+
 - Le système utilisé (OS)
 - La version du système utilisé
 - Le nom de l'hôte

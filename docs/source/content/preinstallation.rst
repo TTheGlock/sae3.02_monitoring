@@ -14,7 +14,6 @@ Modules Python
 
     Vous pouvez retrouver ces modules dans le fichier *requirements.txt*, à la racine du dossier.
 
-
 * ``psutil`` v5.9.6 ou +
     - via https://pypi.org/project/psutil/
     - ``pip install psutil``
