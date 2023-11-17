@@ -28,7 +28,7 @@ Création d'un utilisateur pour l'application
     CREATE USER application WITH PASSWORD 'gtrnet';
 
 --------------------------------------------
-Création et utilisation de la BD PostgreSQL
+Création et utilisation de la BD PostgreSQL : ``sae302_monitoring``
 --------------------------------------------
 
 Pour créer la base de données PostgreSQL sur une de nos VMs : 
@@ -64,9 +64,9 @@ La table devra accueillir, dans l'ordre :
         operating_system varchar(50) NOT NULL,
         system_version varchar(50) NOT NULL,
         name varchar(50) NOT NULL,
-        cpu_charge float NOT NULL,
-        ram_charge float NOT NULL,
-        disk_charge float NOT NULL
+        cpu_charge numeric(4,2) NOT NULL,
+        ram_charge numeric(4,2) NOT NULL,
+        disk_charge numeric(4,2) NOT NULL
     );
 
 Puis pour donner certains droits sur la table ``machines`` à l'utilisateur ``application`` : 
@@ -74,3 +74,13 @@ Puis pour donner certains droits sur la table ``machines`` à l'utilisateur ``ap
 .. code-block:: sql
 
     GRANT SELECT, INSERT, UPDATE, DELETE, REFERENCES ON machines TO application;
+
+--------------------------------------------
+Insertion de données dans la table principale
+--------------------------------------------
+
+Exemple d'insertion dans la table ``machines`` :
+
+.. code-block:: sql
+
+    INSERT INTO machines VALUES (DEFAULT, '192.168.1.39', 'Linux', '2.4.19', 'PC de Colin', '58,88', ';
