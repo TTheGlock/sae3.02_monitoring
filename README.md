@@ -12,4 +12,5 @@ Sae 3.02, création d'une application graphique de monitoring d'ordinateurs
 
 1. Se placer dans le répertoire principal `sae3.02_monitoring`
 2. Ouvrir un terminal dans ce répertoire
-3. Éxecuter la commande : ```sphinx-build docs/source/ html/```
+3. Changez les droits d'exécution du programme bash : `chmod +x sphinx-build.bash`
+4. Lancez le programme bash : `./sphinx-build.bash`
