@@ -35,6 +35,8 @@ Modules Python
     - déjà installé de base avec python>=3.11
 * ``socket``
     - déjà installé de base avec python>=3.11
+* ``time``
+    - déjà installé de base avec python>=3.11   
 
 --------------------------------------------
 Ajout du dossier principal au PATH
