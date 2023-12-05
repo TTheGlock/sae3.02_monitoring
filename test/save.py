@@ -9,7 +9,7 @@ import socket
 import ast  # Module pour convertir la chaîne JSON en dictionnaire
 
 # Configuration du serveur
-server_address = ('192.168.89.98', 12345)  # Adresse et port du serveur
+server_address = ('172.17.15.21', 12345)  # Adresse et port du serveur
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(server_address)
 server_socket.listen(1)

@@ -8,13 +8,14 @@ Created on Thu Nov 16 20:39:26 2023
 import socket
 import psycopg2
 
+
 # Connexion à PostgreSQL (adapté avec vos informations de connexion)
 conn = psycopg2.connect(
-    dbname='votre_nom_de_bdd',
-    user='votre_utilisateur',
-    password='votre_mot_de_passe',
-    host='localhost',
-    port='votre_port'
+    dbname='sae_database',
+    user='sae',
+    password='sae2023',
+    host='127.0.0.1',
+    port='5432'
 )
 cursor = conn.cursor()
 
@@ -34,7 +35,7 @@ cursor.execute('''
 conn.commit()
 
 # Configuration du serveur
-server_address = ('127.0.0.1', 12345)  # Adresse et port du serveur
+server_address = ('172.17.15.21', 12345)  # Adresse et port du serveur
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind(server_address)
 server_socket.listen(1)
@@ -54,10 +55,13 @@ while True:
         break
 
     # Décodage des données
-    system_info = data.decode()
+    system_info = data.decode('utf-8', 'ignore')
+   
 
     # Séparation des données reçues
     info_list = system_info.split(',')
+    print(len(info_list))  # Check the length of info_list
+    print(info_list)       # Print the contents of info_list
 
     # Insertion des données dans la base de données
     cursor.execute('''

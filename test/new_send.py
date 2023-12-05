@@ -11,7 +11,7 @@ import psutil
 import socket
 import pickle  # Module pour sérialiser les données
 
-from PyQt5.QtWidgets import QApplication, QPushButton, QVBoxLayout, QWidget
+from PyQt6.QtWidgets import QApplication, QPushButton, QVBoxLayout, QWidget
 
 class SystemInfoWidget(QWidget):
     def __init__(self):
@@ -55,7 +55,7 @@ class SystemInfoWidget(QWidget):
         system_info = self.get_system_info()
 
         # Établir une connexion avec le serveur
-        server_address = ('127.0.0.1', 12345)  # Adresse et port du serveur
+        server_address = ('172.17.15.21', 12345)  # Adresse et port du serveur
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client_socket.connect(server_address)
 
@@ -63,7 +63,9 @@ class SystemInfoWidget(QWidget):
         serialized_data = pickle.dumps(system_info)
 
         # Envoyer les informations au serveur
-        client_socket.sendall(serialized_data)
+        client_socket.send(serialized_data)
+        # client_socket.send((serialized_data).encode('utf-8','ignore'))
+
 
         # Fermeture de la connexion avec le serveur
         client_socket.close()
@@ -74,4 +76,4 @@ if __name__ == '__main__':
     window.setWindowTitle('Informations Système - Client')
     window.setGeometry(100, 100, 400, 400)
     window.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
