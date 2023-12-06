@@ -26,7 +26,7 @@ Création d'un utilisateur pour l'application
 .. code-block:: sql
 
     CREATE USER application WITH PASSWORD 'gtrnet';
-    ALTER USER application WITH SUPERUSER
+    ALTER USER application WITH SUPERUSER ;
 
 --------------------------------------------
 Création et utilisation de la BD PostgreSQL : ``sae302_monitoring``
