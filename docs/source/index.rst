@@ -26,7 +26,11 @@ SAE 3.02 - Monitoring
 
    content/postgresql
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Lancement
 
+   content/sphinx
 
 Indices and tables
 ==================
