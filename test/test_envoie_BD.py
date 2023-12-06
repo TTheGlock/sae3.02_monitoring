@@ -1,5 +1,5 @@
 import psycopg2
-
+from test_psutil import recuperation_data
 
 
 # Paramètres de connexion à la base de données
@@ -18,13 +18,19 @@ connexion = psycopg2.connect(**parametres_connexion)
 curseur = connexion.cursor()
 
 # Données à insérer (sous forme de tuple)
-donnees = ('192.168.1.39', 'Linux', '2.4.19', 'PC de Colin', '58.88', '40.00', '50.00')
+#donnees = ('192.168.1.39', 'Linux', '2.4.19', 'PC de Colin', '58.88', '40.00', '50.00')
+
+donnees = recuperation_data()
+
+#donnees = ('172.17.6.21', 'Linux', '1 SMP PREEMPT_DYNAMIC Debian 6.1.55-1 (2023-09-29)', 'deb12', '10.1', '56.67', '79.0')
 
 # Requête SQL d'insertion avec des placeholders (%s)
 requete_insertion = "INSERT INTO machines VALUES (DEFAULT, %s, %s, %s, %s, %s, %s, %s);"
 
 print(requete_insertion)
 print(donnees)
+
+
 
 # Exécuter la requête avec les données
 curseur.execute(requete_insertion, donnees)
@@ -38,4 +44,4 @@ curseur.close()
 connexion.close()
 
 
-psql -U application -d sae302_monitoring -c "GRANT SELECT, INSERT, UPDATE, DELETE ON machines TO application;"
+#psql -U application -d sae302_monitoring -c "GRANT SELECT, INSERT, UPDATE, DELETE ON machines TO application;"
