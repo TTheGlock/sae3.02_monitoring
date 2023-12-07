@@ -4,6 +4,8 @@ import paramiko
 ssh_client = paramiko.SSHClient()
 ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
+#mettre ce programme en def ssh_vers_client(x,y): AVEC x la nouvelle_valeur et y chaque adresse ip disponible
+
 # Informations de connexion SSH
 ssh_host = '172.17.6.21'
 ssh_port = 22
@@ -17,7 +19,7 @@ ssh_client.connect(hostname=ssh_host, port=ssh_port, username=ssh_username, pass
 commande_bash = """
 #!/bin/bash
 
-nouvelle_valeur="456789"
+nouvelle_valeur="bonsoir"
 chemin_fichier="/home/etudiant/Documents/test/temp.py"
 
 sed -i "s/ma_variable = .*/ma_variable = '$nouvelle_valeur'/" "$chemin_fichier"
