@@ -26,7 +26,7 @@ SAE 3.02 - Monitoring
 
    content/postgresql
    content/sphinx
-   modules
+   content/modules
 
 Indices et tables
 ==================

@@ -59,6 +59,14 @@ Dans le fichier de configuration ``source/conf.py`` de sphinx, il faut vérifier
     ]
 
 --------------------------------------------
+Génération des modules
+--------------------------------------------
+
+.. code-block:: bash
+
+    sphinx-apidoc --private -o docs/source/content test
+
+--------------------------------------------
 Génération de la documentation
 --------------------------------------------
 
