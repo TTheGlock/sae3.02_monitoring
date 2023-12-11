@@ -29,6 +29,9 @@ Modules Python
 * ``netifaces`` v0.11.0 ou +
     - via https://pypi.org/project/netifaces/
     - ``pip install netifaces``
+* ``paramiko`` v3.3.1 ou +
+    - via https://pypi.org/project/paramiko/
+    - ``pip install paramiko``
 * ``platform`` v1.0.8 ou +
     - déjà installé de base avec python>=3.11
 * ``shutil``
