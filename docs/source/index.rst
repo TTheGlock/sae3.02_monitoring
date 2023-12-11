@@ -25,14 +25,10 @@ SAE 3.02 - Monitoring
    :caption: Documentation
 
    content/postgresql
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Lancement
-
    content/sphinx
+   modules
 
-Indices and tables
+Indices et tables
 ==================
 
 * :ref:`genindex`

@@ -1,7 +1,7 @@
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath('../../sae3.02_monitoring/sae3.02_monitoring'))
+sys.path.insert(0, os.path.abspath('../../test'))
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -34,5 +34,5 @@ language = 'fr'
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 html_static_path = ['_static']
