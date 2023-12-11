@@ -50,9 +50,9 @@ class UserInfoWidget(QWidget):
 
         # Connexion à la base de données
         conn = psycopg2.connect(
-            dbname='sae_database',
-            user='sae',
-            password='sae2023',
+            dbname='sae302_monitoring',
+            user='application',
+            password='gtrnet',
             host='localhost',
             port='5432'
         )
@@ -60,16 +60,17 @@ class UserInfoWidget(QWidget):
 
         # Requête pour récupérer les informations de l'utilisateur par son adresse IP
         query = '''
-            SELECT * FROM system_info
-            WHERE ip_address = %s
+            SELECT * FROM machines
+            WHERE ip_addr = %s
         '''
         cursor.execute(query, (ip_address,))
-        user_info = cursor.fetchone()  # Récupérer la première ligne correspondant à l'adresse IP
+        user_info = cursor.fetchall()  # Fetch all rows that match the IP address
 
         cursor.close()
         conn.close()
 
         if user_info:
+            # Format the table rows and generate the result text
             result_text = f"""
                 <h3>Informations sur l'utilisateur</h3>
                 <table border="1" cellpadding="5" cellspacing="0">
@@ -81,20 +82,19 @@ class UserInfoWidget(QWidget):
                         <th>Mémoire</th>
                         <th>Disque</th>
                     </tr>
-                    <tr>
-                        <td>{user_info[3]}</td>
-                        <td>{user_info[2]}</td>
-                        <td>{user_info[1]}</td>
-                        <td>{user_info[5]}%</td>
-                        <td>{user_info[6]}%</td>
-                        <td>{user_info[7]}%</td>
-                    </tr>
+                    {self._generate_table_rows(user_info)}
                 </table>
             """
         else:
             result_text = "Aucune information trouvée pour cette adresse IP."
 
         self.result_label.setText(result_text)
+
+    def _generate_table_rows(self, user_info):
+        rows = []
+        for row in user_info:
+            rows.append(f"<tr><td>{row[3]}</td><td>{row[2]}</td><td>{row[1]}</td><td>{row[5]}%</td><td>{row[6]}%</td><td>{row[7]}%</td></tr>")
+        return "".join(rows)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

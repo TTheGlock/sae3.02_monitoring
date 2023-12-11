@@ -19,7 +19,7 @@ ssh_client.connect(hostname=ssh_host, port=ssh_port, username=ssh_username, pass
 commande_bash = """
 #!/bin/bash
 
-nouvelle_valeur="bonsoir"
+nouvelle_valeur="au revoir"
 chemin_fichier="/home/etudiant/Documents/test/temp.py"
 
 sed -i "s/ma_variable = .*/ma_variable = '$nouvelle_valeur'/" "$chemin_fichier"

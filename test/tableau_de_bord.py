@@ -38,16 +38,16 @@ class DashboardWidget(QWidget):
     def populate_table(self):
         # Connexion à la base de données
         conn = psycopg2.connect(
-            dbname='sae_database',
-            user='sae',
-            password='sae2023',
+            dbname='sae302_monitoring',
+            user='application',
+            password='gtrnet',
             host='localhost',
             port='5432'
         )
         cursor = conn.cursor()
 
         # Récupérer toutes les données de la table system_info
-        cursor.execute('SELECT * FROM system_info')
+        cursor.execute('SELECT * FROM machines')
         user_data = cursor.fetchall()
 
         cursor.close()
