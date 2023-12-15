@@ -10,3 +10,4 @@ netifaces==0.11.0
     #via https://pypi.org/project/netifaces/
 paramiko==3.3.1
     #via https://pypi.org/project/paramiko/
+psycopg2==?

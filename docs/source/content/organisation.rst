@@ -52,7 +52,7 @@ Organisation des fichiers du dossier ``test``
 
 * ``test_boucle.py`` = fichier de test de manipulation de boucle
 
-* ``test_envoie_BD.py`` = fichier de test de l'envoi de données sur la base de données ``psutil``
+* ``test_envoie_BD.py`` = fichier de test de l'envoi de données sur la base de données
 
 * ``test_psutil.py`` = fichier de test du module ``psutil``
 
