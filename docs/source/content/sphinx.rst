@@ -44,7 +44,7 @@ Il faut ajouter la ligne suivante dans le fichier .bashrc du répertoire personn
 
 .. code-block:: bash
 
-export PYTHONPATH=$PYTHONPATH:/chemin_vers_repertoire_module
+    export PYTHONPATH=$PYTHONPATH:/chemin_vers_repertoire_module
 
 Dans le fichier de configuration ``source/conf.py`` de sphinx, il faut vérifier que l’extension ``sphinx.ext.autodoc`` est présente, sinon il faut la rajouter :
 
