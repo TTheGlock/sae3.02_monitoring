@@ -7,7 +7,7 @@ Documentation Sphinx
     Cette documentation retrace seulement les commandes effectuées pour la partie Sphinx (exemple : création de la documentation, création du site web...).
 
 --------------------------------------------
-Installation du programme Sphinx
+1. Installation du programme Sphinx
 --------------------------------------------
 
 .. code-block:: bash
@@ -25,7 +25,7 @@ Ou
    Pour les systèmes RPM : python3-sphinx.noarch et python3-sphinx_rtd_theme.noarch
 
 --------------------------------------------
-Génération de l'arborescence des répertoires de la documentation
+2. Génération de l'arborescence des répertoires de la documentation
 --------------------------------------------
 
 .. code-block:: bash
@@ -37,14 +37,14 @@ Génération de l'arborescence des répertoires de la documentation
    À ne faire qu'une seule fois, juste après l'installation !
 
 --------------------------------------------
-Finalisation de l'installation
+3. Finalisation de l'installation
 --------------------------------------------
 
 Il faut ajouter la ligne suivante dans le fichier .bashrc du répertoire personnel :
 
 .. code-block:: bash
 
-export PYTHONPATH=$PYTHONPATH:/chemin_vers_repertoire_module
+    export PYTHONPATH=$PYTHONPATH:/chemin_vers_repertoire_module
 
 Dans le fichier de configuration ``source/conf.py`` de sphinx, il faut vérifier que l’extension ``sphinx.ext.autodoc`` est présente, sinon il faut la rajouter :
 
@@ -62,9 +62,11 @@ Dans le fichier de configuration ``source/conf.py`` de sphinx, il faut vérifier
 Génération des modules
 --------------------------------------------
 
+Pour générer la documentation des modules, on utilise la commande suivante dans la racine du dossier : 
+
 .. code-block:: bash
 
-    sphinx-apidoc --private -o docs/source/content test
+    sphinx-apidoc -o docs/source/content test/
 
 --------------------------------------------
 Génération de la documentation

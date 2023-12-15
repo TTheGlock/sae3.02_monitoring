@@ -7,8 +7,16 @@ Documentation PostgreSQL
     Cette documentation retrace seulement les commandes effectuées pour la partie PostgreSQL (exemple : création des tables, mise en place d'utilisateurs...).
 
 --------------------------------------------
-Connexion à la BD PostgreSQL
+1. Connexion à la BD PostgreSQL
 --------------------------------------------
+
+- 1ère méthode (mot de passe = ``postgres``): 
+
+.. code-block:: bash
+
+    psql -U postgres -h localhost
+
+- 2ème méthode (si la 1ère n'a pas fonctionné): 
 
 .. code-block:: bash
 
@@ -20,7 +28,7 @@ Connexion à la BD PostgreSQL
     ALTER USER postgres PASSWORD 'gtrnet';
 
 --------------------------------------------
-Création d'un utilisateur pour l'application
+2. Création d'un utilisateur pour l'application
 --------------------------------------------
 
 .. code-block:: sql
@@ -29,10 +37,10 @@ Création d'un utilisateur pour l'application
     ALTER USER application WITH SUPERUSER ;
 
 --------------------------------------------
-Création et utilisation de la BD PostgreSQL : ``sae302_monitoring``
+3. Création et utilisation de la BD PostgreSQL : ``sae302_monitoring``
 --------------------------------------------
 
-Pour créer la base de données PostgreSQL sur une de nos VMs : 
+Pour créer la base de données PostgreSQL sur un de nos conteneurs LXC : 
 
 .. code-block:: sql
 
@@ -45,7 +53,7 @@ Pour utiliser cette base de données :
 	\c sae302-monitoring;
 
 --------------------------------------------
-Création de la table principale : ``machines``
+4. Création de la table principale : ``machines``
 --------------------------------------------
 
 La table devra accueillir, dans l'ordre : 
