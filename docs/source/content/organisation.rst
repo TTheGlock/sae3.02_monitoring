@@ -5,6 +5,56 @@ Organisation des fichiers
 Dans cette documentation, vous allez retrouver des explications sur les fichiers présents dans ce projet.
 
 --------------------------------------------
+Organisation des fichiers du dossier ``docs``
+--------------------------------------------
+
+.. code-block:: bash
+
+    ─ docs
+    ├── build
+    │   └── not_empty.txt
+    ├── make.bat
+    ├── Makefile
+    └── source
+        ├── conf.py
+        ├── content
+        │   ├── cahier_des_charges.rst
+        │   ├── code.rst
+        │   ├── objectifs.rst
+        │   ├── organisation.rst
+        │   ├── postgresql.rst
+        │   ├── preinstallation.rst
+        │   └── sphinx.rst
+        ├── index.rst
+        ├── _static
+        │   ├── Diagramme_SAE.png
+        │   └── not_empty.txt
+        └── _templates
+            └── not_empty.txt
+
+* ``make.bat`` = fichier bat pour générer la configuration (ne pas utiliser, préférez ``sphinx_build.sh``) depuis Windows
+
+* ``Makefile`` = fichier make pour générer la configuration (ne pas utiliser, préférez ``sphinx_build.sh``) depuis Linux
+
+* ``conf.py`` = fichier de configuration de Sphinx
+
+* ``cahier_des_charges.rst`` = fichier reStrucuredtext parlant du cahier des charges demandés pour ce projet
+
+* ``code.rst`` = fichier reStrucuredtext parlant des modules du programme (utilisant automodule de Sphinx)
+
+* ``objectifs.rst`` = fichier reStrucuredtext parlant des objectifs du projet
+
+* ``organisation.rst`` = fichier reStrucuredtext parlant de l'organisation du projet (vous êtes ici)
+
+* ``postgresql.rst`` = fichier reStrucuredtext parlant de la mise en place de la base de données PostgreSQL
+
+* ``preinstallation.rst`` = fichier reStrucuredtext parlant des modules requis et divers choses à faire avant de lancer le programme principal
+
+* ``sphinx.rst`` = fichier reStrucuredtext parlant de la mise en place de la documentation Sphinx
+
+* ``index.rst`` = fichier reStrucuredtext principal, c'est l'accueil
+
+--------------------------------------------
 Organisation des fichiers du dossier ``test``
 --------------------------------------------
 
