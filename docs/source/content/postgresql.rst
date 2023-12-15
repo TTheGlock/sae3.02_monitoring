@@ -10,6 +10,14 @@ Documentation PostgreSQL
 Connexion à la BD PostgreSQL
 --------------------------------------------
 
+- 1ère méthode (mot de passe = ``postgres``): 
+
+.. code-block:: bash
+
+    psql -U postgres -h localhost
+
+- 2èeme méthode (si la 1ère n'a pas fonctionné): 
+
 .. code-block:: bash
 
     sudo -u posgres -i
