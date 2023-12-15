@@ -46,28 +46,28 @@ class UserInfoWidget(QWidget):
         self.setLayout(self.layout)
 
     def search_user(self):
-        ip_address = self.ip_input.text()
+        ip_address = self.ip_input.text()  # Récupère l'adresse IP du champ de saisie
 
         # Connexion à la base de données
         conn = psycopg2.connect(
-            dbname='sae302_monitoring',
-            user='application',
-            password='gtrnet',
-            host='localhost',
-            port='5432'
-        )
-        cursor = conn.cursor()
+        dbname='sae302_monitoring',
+        user='application',
+        password='gtrnet',
+        host='localhost',
+        port='5432'
+        )  # Établit une connexion à la base de données PostgreSQL
+        cursor = conn.cursor()  # Crée un objet curseur pour exécuter des requêtes SQL
 
-        # Requête pour récupérer les informations de l'utilisateur par son adresse IP
-        query = '''
+        # Requête pour récupérer les informations de l'utilisateur en fonction de son adresse IP
+        query = """
             SELECT * FROM machines
             WHERE ip_addr = %s
-        '''
-        cursor.execute(query, (ip_address,))
-        user_info = cursor.fetchall()  # Fetch all rows that match the IP address
+        """  # Définit la requête SQL pour récupérer les données de la table 'machines'
+        cursor.execute(query, (ip_address,))  # Exécute la requête, en passant l'adresse IP en tant que paramètre
+        user_info = cursor.fetchall()  # Récupère toutes les lignes de la base de données qui correspondent à l'adresse IP
 
-        cursor.close()
-        conn.close()
+        cursor.close()  # Ferme l'objet curseur
+        conn.close()  # Ferme la connexion à la base de données
 
         if user_info:
             # Format the table rows and generate the result text

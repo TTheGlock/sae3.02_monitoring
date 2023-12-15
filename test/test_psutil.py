@@ -18,11 +18,11 @@ def recuperation_data():
 
     #----- CPU -----
     cpu_intervalles = 5
-    cpu_charge = str(psutil.cpu_percent(interval=cpu_intervalles))
+    cpu_charge = float(psutil.cpu_percent(interval=cpu_intervalles))
 
     #----- Mémoire RAM -----
     ram_total = psutil.virtual_memory().total / (2**30)
-    memory_usage = str(f"{psutil.virtual_memory().percent}")
+    memory_usage = float(f"{psutil.virtual_memory().percent}")
 
     #----- Mémoire Disque et Réseaux -----
     lettres = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O"]
@@ -38,14 +38,14 @@ def recuperation_data():
     disque_used_gb = disque_used // (2**30)
     disque_free_gb = disque_free // (2**30)
     charge_disk = disque_used_gb/disque_total_gb*100
-    charge_disk = str("{:.2f}".format(charge_disk))
+    charge_disk = float("{:.2f}".format(charge_disk))
 
     #----- Réseau -----
     adresse_mac = str(getmac.get_mac_address())
     ipv4 = str(ni.ifaddresses('eth0')[ni.AF_INET][0]['addr'])
 
     #----- data -----
-    data = f"('{ipv4}', '{systeme}', '{version}', '{nom}', '{cpu_charge}', '{charge_disk}', '{memory_usage}')"
+    data = (ipv4, systeme, version, nom, cpu_charge, charge_disk, memory_usage)
     
     return data
 

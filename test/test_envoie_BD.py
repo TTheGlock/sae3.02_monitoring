@@ -1,6 +1,8 @@
 import psycopg2
 from test_psutil import recuperation_data
+import time
 
+a = 10
 
 # Paramètres de connexion à la base de données
 parametres_connexion = {
@@ -44,4 +46,10 @@ curseur.close()
 connexion.close()
 
 
-#psql -U application -d sae302_monitoring -c "GRANT SELECT, INSERT, UPDATE, DELETE ON machines TO application;"
+# Rafraîchissement toutes les 10 secondes
+while True:
+    # Exécuter le code
+    print("Rafraîchissement...")
+    donnees = recuperation_data()
+    print(donnees)
+    time.sleep(a)
