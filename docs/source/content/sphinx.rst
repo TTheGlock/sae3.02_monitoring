@@ -62,9 +62,11 @@ Dans le fichier de configuration ``source/conf.py`` de sphinx, il faut vérifier
 Génération des modules
 --------------------------------------------
 
+Pour générer la documentation des modules, on utilise la commande suivante dans la racine du dossier : 
+
 .. code-block:: bash
 
-    sphinx-apidoc --private -o docs/source/content test
+    sphinx-apidoc -o docs/source/content test/
 
 --------------------------------------------
 Génération de la documentation
