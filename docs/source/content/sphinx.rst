@@ -7,7 +7,7 @@ Documentation Sphinx
     Cette documentation retrace seulement les commandes effectuées pour la partie Sphinx (exemple : création de la documentation, création du site web...).
 
 --------------------------------------------
-Installation du programme Sphinx
+1. Installation du programme Sphinx
 --------------------------------------------
 
 .. code-block:: bash
@@ -25,7 +25,7 @@ Ou
    Pour les systèmes RPM : python3-sphinx.noarch et python3-sphinx_rtd_theme.noarch
 
 --------------------------------------------
-Génération de l'arborescence des répertoires de la documentation
+2. Génération de l'arborescence des répertoires de la documentation
 --------------------------------------------
 
 .. code-block:: bash
@@ -37,7 +37,7 @@ Génération de l'arborescence des répertoires de la documentation
    À ne faire qu'une seule fois, juste après l'installation !
 
 --------------------------------------------
-Finalisation de l'installation
+3. Finalisation de l'installation
 --------------------------------------------
 
 Il faut ajouter la ligne suivante dans le fichier .bashrc du répertoire personnel :
