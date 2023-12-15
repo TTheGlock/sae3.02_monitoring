@@ -40,7 +40,7 @@ Création d'un utilisateur pour l'application
 Création et utilisation de la BD PostgreSQL : ``sae302_monitoring``
 --------------------------------------------
 
-Pour créer la base de données PostgreSQL sur une de nos VMs : 
+Pour créer la base de données PostgreSQL sur un de nos conteneurs LXC : 
 
 .. code-block:: sql
 
