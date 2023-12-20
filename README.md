@@ -1,5 +1,6 @@
 # sae3.02_monitoring
-Sae 3.02, création d'une application graphique de monitoring d'ordinateurs
+Sae 3.02, création d'une application graphique de monitoring d'ordinateurs.
+Cette a
 
 ## Répartition des tâches
 
@@ -19,4 +20,10 @@ Sae 3.02, création d'une application graphique de monitoring d'ordinateurs
 
 ### 1.2 Installation de l'application cliente
 
+1. 
+2. 
+3. 
+
 ### 1.3 Installation de l'application
+
+## 2. Fonctionnement
