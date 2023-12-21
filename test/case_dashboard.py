@@ -102,7 +102,7 @@ class UserInfoWidget(QWidget):
         query2 = """
             SELECT cpu_charge, ram_charge, disk_charge
             FROM machines
-            WHERE ip_addr = '172.17.6.21'
+            WHERE ip_addr = '%s'
             LIMIT 10
         """
 
@@ -120,6 +120,11 @@ class UserInfoWidget(QWidget):
             disk_charge.append(int(result[2]))
 
 
+        # Créez les graphiques
+        #cpu_graph = graph.graph.create_line_graph(cpu_charge)
+        #ram_graph = graph.graph.create_line_graph(ram_charge)
+        #disk_graph = graph.graph.create_line_graph(disk_charge)
+
         cursor.close()
         conn.close()
 
@@ -128,17 +133,10 @@ class UserInfoWidget(QWidget):
             info = f"Nom : {user_info[4]}\nSystème : {user_info[2]} \nVersion : {user_info[3]} \nIP : {user_info[1]}"
             self.info_label.setText(info)
             
-            # Affiche un graphique de la charge du processeur
-            #self.cpu_label.setText(f"Processeur : {cpu_charge[-1]}%")
-            #graph(cpu_charge)
-
-            # Affiche un graphique de la charge de la mémoire
-            #self.memory_label.setText(f"Mémoire : {ram_charge[-1]}%")
-            #graph(ram_charge)
-
-            # Affiche un graphique de la charge du disque
-            #self.disk_label.setText(f"Disque : {disk_charge[-1]}%")
-            #graph(disk_charge)
+            # Afficher les graphiques
+            #self.cpu_label.setPixmap(cpu_graph)
+            #self.memory_label.setPixmap(ram_graph)
+            #self.disk_label.setPixmap(disk_graph)
         
         else:
             # Affiche un message si aucune information n'est trouvée
