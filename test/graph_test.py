@@ -1,40 +1,40 @@
-# Importez la bibliothèque graphique Qt
 import sys
-from PySide6.QtCharts import QChart, QBarSeries, QBarSet, QChartView, QLineSeries
-from PyQt5.QtWidgets import QApplication, QMainWindow, QGridLayout, QTableWidget
+import pyqtgraph as pg
 
-# Créez une application Qt
-app = QApplication(sys.argv)
+def graph_1(data):
+    # create plot
+    plt = pg.plot()
+    plt.showGrid(x=True, y=True)
+    plt.addLegend()
 
-# Créez une fonction pour créer un graphique
-def graph(data):
-    # Créez un graphique
-    chart = QChart()
+    # set properties
+    plt.setLabel('left', 'Taux d utilisage', units='%')
+    plt.setLabel('bottom', 'Temps', units='s')
+    plt.setXRange(0, 10)
+    plt.setYRange(0, 100)
+    plt.setWindowTitle('pyqtgraph plot')
 
-    # Ajoutez les données au graphique
-    for i in range(len(data)):
-        chart.addSeries(QLineSeries([(i, data[i])]).setName(f"Point {i}"))
+    # plot
+    plt.plot(range(0, 10), data, pen='b', symbol='x', symbolPen='b', symbolBrush=0.2, name='red')
 
-    # Configurez le graphique
-    chart.setTitle("Charge CPU")
-    chart.setYRange(0, 100)
-    chart.setXRange(0, 9)
+    return plt
 
-    # Créez un widget QChartView
-    chartView = QChartView(chart)
 
-    # Afficher le graphique
-    chartView.show()
+def main():
+    app = pg.QtWidgets.QApplication(sys.argv)
 
-    # Afficher un message
-    print("Le graphique a été créé avec succès.")
+    # Get data from another program
+    data = [10, 20, 30, 40, 50, 10, 20, 30, 40, 50]
 
-# Définir les données
-data = [35, 36, 37, 38, 39, 38, 37, 53, 53, 54]
+    # Call the graph function
+    graph = graph_1(data)
 
-# Afficher le graphique
+    # Display the graph
+    graph.show()
+
+    # Terminate the application
+    sys.exit(app.exec())
+
+
 if __name__ == "__main__":
-    graph(data)
-
-# Exécutez l'application
-app.exec_()
+  main()
