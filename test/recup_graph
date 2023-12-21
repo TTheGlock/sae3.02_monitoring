@@ -1,5 +1,5 @@
 import psycopg2
-from graph_test import graph
+from graph_test import graph_1
 
 # Établit une connexion à la base de données PostgreSQL
 conn = psycopg2.connect(
@@ -42,9 +42,6 @@ print("Disk charge :", disk_charge)
 # Ferme la connexion à la base de données
 conn.close()
 
-graph(cpu_charge)
-graph(ram_charge)
-graph(disk_charge)
 
 
 

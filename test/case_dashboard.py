@@ -1,6 +1,6 @@
 import sys
 import psycopg2
-from graph_test import graph
+from graph_test import graph_1
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import (
     QApplication,
@@ -99,15 +99,15 @@ class UserInfoWidget(QWidget):
 
 
         # Requête pour récupérer les 10 derniers cpu_charge, ram_charge et disk_charge de l'adresse IP '192.168.1.39'
-        query2 = """
+        query = """
             SELECT cpu_charge, ram_charge, disk_charge
             FROM machines
-            WHERE ip_addr = '%s'
+            WHERE ip_addr = '172.17.6.21'
             LIMIT 10
         """
 
         # Exécute la requête et récupère les résultats
-        cursor.execute(query2)
+        cursor.execute(query)
         results = cursor.fetchall()
 
         # Convertit les charges en chiffres
@@ -119,11 +119,12 @@ class UserInfoWidget(QWidget):
             ram_charge.append(int(result[1]))
             disk_charge.append(int(result[2]))
 
+    
 
         # Créez les graphiques
-        #cpu_graph = graph.graph.create_line_graph(cpu_charge)
-        #ram_graph = graph.graph.create_line_graph(ram_charge)
-        #disk_graph = graph.graph.create_line_graph(disk_charge)
+        cpu_graph = graph_1(cpu_charge, "charge CPU")
+        ram_graph = graph_1(ram_charge, "charge ram")
+        disk_graph = graph_1(disk_charge, "charge disk")
 
         cursor.close()
         conn.close()
