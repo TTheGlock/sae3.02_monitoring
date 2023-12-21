@@ -31,7 +31,7 @@ Il faut d'abord commencer par générer la documentation Sphinx, qui nous sera u
 2. 
 3. 
 
-### 1.4 Installation de l'application
+### 1.4 Installation du panel administrateur
 
 1.
 2. 
