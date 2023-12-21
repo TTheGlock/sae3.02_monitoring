@@ -82,16 +82,16 @@ class UserInfoWidget(QWidget):
             dbname="sae302_monitoring",
             user="application",
             password="gtrnet",
-            host="172.17.21.25",
+            host="localhost",
             port="5432"
         )
         cursor = conn.cursor()
 
         # Requête pour récupérer les informations de la machine en fonction de son adresse IP
-        query = """
+        query = f"""
             SELECT *
             FROM machines
-            WHERE ip_addr = %s
+            WHERE ip_addr = '{ip_address}'
             LIMIT 10
         """
         cursor.execute(query, (ip_address,))
@@ -99,10 +99,10 @@ class UserInfoWidget(QWidget):
 
 
         # Requête pour récupérer les 10 derniers cpu_charge, ram_charge et disk_charge de l'adresse IP '192.168.1.39'
-        query2 = """
+        query2 = f"""
             SELECT cpu_charge, ram_charge, disk_charge
             FROM machines
-            WHERE ip_addr = %s
+            WHERE ip_addr = '{ip_address}'
             LIMIT 10
         """
 

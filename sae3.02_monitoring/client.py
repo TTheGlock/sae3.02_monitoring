@@ -9,7 +9,7 @@ parametres_connexion = {
     'dbname': 'sae302_monitoring',
     'user': 'application',
     'password': 'gtrnet',
-    'host': '172.17.21.25',  # ou '127.0.0.1' si votre base de données est en local
+    'host': 'localhost',  # ou '127.0.0.1' si votre base de données est en local
     'port': '5432'  # Port par défaut de PostgreSQL
 }
 
