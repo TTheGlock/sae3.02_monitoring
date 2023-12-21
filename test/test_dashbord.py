@@ -3,6 +3,7 @@ import PyQt6.QtCore as Qt
 from PyQt6.QtWidgets import (
     QApplication,
     QLabel,
+    QVBoxLayout
 )
 
 
