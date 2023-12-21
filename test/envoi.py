@@ -16,7 +16,7 @@ class ClientWidget(QWidget):
     def __init__(self):
         super(ClientWidget, self).__init__()
 
-        self.server_address = ('172.17.15.21', 12345)  # Adresse et port du serveur
+        self.server_address = ('172.17.21.25', 12345)  # Adresse et port du serveur
         self.client_socket = None
 
         self.init_ui()
