@@ -62,6 +62,7 @@ class UserInfoWidget(QWidget):
         query = """
             SELECT * FROM machines
             WHERE ip_addr = %s
+            LIMIT 10
         """  # Définit la requête SQL pour récupérer les données de la table 'machines'
         cursor.execute(query, (ip_address,))  # Exécute la requête, en passant l'adresse IP en tant que paramètre
         user_info = cursor.fetchall()  # Récupère toutes les lignes de la base de données qui correspondent à l'adresse IP
