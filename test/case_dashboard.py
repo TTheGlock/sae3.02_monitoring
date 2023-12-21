@@ -1,5 +1,6 @@
 import sys
 import psycopg2
+from graph_test import graph
 from PyQt6.QtCore import Qt
 from PyQt6.QtWidgets import (
     QApplication,
@@ -26,6 +27,10 @@ class UserInfoWidget(QWidget):
         self.ip_input = QLineEdit()
         self.ip_input.setPlaceholderText("Entrez l'adresse IP")
 
+        # Créez le label qui affichera les informations
+        self.info_label = QLabel("")
+        self.info_label.setStyleSheet("border: 1px solid black;")
+
         # Créez le bouton de recherche
         self.search_button = QPushButton("Rechercher")
 
@@ -33,28 +38,28 @@ class UserInfoWidget(QWidget):
         self.search_button.clicked.connect(self.update_result_label)
 
         # Créez les labels qui afficheront les résultats
-        self.name_label = QLabel("")
-        self.name_label.setStyleSheet("border: 1px solid black;")
-        self.name_label.setAlignment(Qt.AlignLeft)
-        self.os_label = QLabel("")
-        self.os_label.setStyleSheet("border: 1px solid black;")
-        self.os_label.setAlignment(Qt.AlignCenter)
+        self.info_label = QLabel("")
+        self.info_label.setStyleSheet("border: 1px solid black;")
+
         self.cpu_label = QLabel("")
         self.cpu_label.setStyleSheet("border: 1px solid black;")
-        self.cpu_label.setAlignment(Qt.AlignCenter)
+
         self.memory_label = QLabel("")
         self.memory_label.setStyleSheet("border: 1px solid black;")
-        self.memory_label.setAlignment(Qt.AlignCenter)
+
+        self.disk_label = QLabel("")
+        self.disk_label.setStyleSheet("border: 1px solid black;")
 
         # Créez le layout grille
         self.grid_layout = QGridLayout()
-        self.grid_layout.addWidget(self.name_label, 0, 0)
-        self.grid_layout.addWidget(self.os_label, 1, 0, 1, 2)
-        self.grid_layout.addWidget(self.cpu_label, 2, 0)
-        self.grid_layout.addWidget(self.memory_label, 3, 0)
 
-        # Alignez les cases pour former un carré
-        # Il n'y a pas besoin de la méthode setAlignment() ici car nous avons positionné les labels manuellement
+        # Ajoutez les widgets d'informations
+        self.grid_layout.addWidget(self.info_label, 0, 0, 1, 1)
+        self.grid_layout.addWidget(self.cpu_label, 0, 1, 1, 1)
+
+        # Ajoutez les widgets graphiques
+        self.grid_layout.addWidget(self.disk_label, 1, 0, 1, 1)
+        self.grid_layout.addWidget(self.memory_label, 1, 1, 1, 1)
 
         # Ajoutez le champ d'entrée d'adresse IP à l'agencement principal
         self.layout.addWidget(self.ip_input)
@@ -62,8 +67,8 @@ class UserInfoWidget(QWidget):
         # Ajoutez le bouton de recherche à l'agencement principal
         self.layout.addWidget(self.search_button)
 
-        # Ajoutez le layout grille à l'agencement principal
-        self.layout.addLayout(self.grid_layout)
+        #Ajoutez le layout grille au layout principal
+        self.layout.addLayout(self.grid_layout, 0)
 
         # Set the layout as the main layout
         self.setLayout(self.layout)
@@ -92,16 +97,49 @@ class UserInfoWidget(QWidget):
         cursor.execute(query, (ip_address,))
         user_info = cursor.fetchone()
 
+
+        # Requête pour récupérer les 10 derniers cpu_charge, ram_charge et disk_charge de l'adresse IP '192.168.1.39'
+        query2 = """
+            SELECT cpu_charge, ram_charge, disk_charge
+            FROM machines
+            WHERE ip_addr = '172.17.6.21'
+            LIMIT 10
+        """
+
+        # Exécute la requête et récupère les résultats
+        cursor.execute(query2)
+        results = cursor.fetchall()
+
+        # Convertit les charges en chiffres
+        cpu_charge = []
+        ram_charge = []
+        disk_charge = []
+        for result in results:
+            cpu_charge.append(int(result[0]))
+            ram_charge.append(int(result[1]))
+            disk_charge.append(int(result[2]))
+
+
         cursor.close()
         conn.close()
 
         if user_info:
             # Mettez à jour les informations affichées dans les labels des résultats
-            info = f"Nom : {user_info[2]} \nSystème : {user_info[3]}"
+            info = f"Nom : {user_info[4]}\nSystème : {user_info[2]} \nVersion : {user_info[3]} \nIP : {user_info[1]}"
             self.info_label.setText(info)
-            self.cpu_label.setText(f"Processeur : {user_info[5]}%")
-            self.memory_label.setText(f"Mémoire : {user_info[6]}%")
-            self.disk_label.setText(f"Disque : {user_info[7]}%")
+            
+            # Affiche un graphique de la charge du processeur
+            #self.cpu_label.setText(f"Processeur : {cpu_charge[-1]}%")
+            #graph(cpu_charge)
+
+            # Affiche un graphique de la charge de la mémoire
+            #self.memory_label.setText(f"Mémoire : {ram_charge[-1]}%")
+            #graph(ram_charge)
+
+            # Affiche un graphique de la charge du disque
+            #self.disk_label.setText(f"Disque : {disk_charge[-1]}%")
+            #graph(disk_charge)
+        
         else:
             # Affiche un message si aucune information n'est trouvée
             self.info_label.setText("Aucune information trouvée")
