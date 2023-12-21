@@ -35,6 +35,12 @@ Modules Python
 * ``psycopg2`` v2.9.9 ou +
     - via https://www.psycopg.org/docs/install.html
     - ``pip install psycopg2-binary``
+* ``matplotlib`` v3.8.2 ou +
+    - via https://pypi.org/project/matplotlib/
+    - ``pip install matplotlib``
+* ``PyQtChart`` v5.15.6 ou +
+    - via https://pypi.org/project/PyQtChart/
+    - ``pip install PyQtChart``
 * ``platform`` v1.0.8 ou +
     - déjà installé de base avec python>=3.11
 * ``shutil``

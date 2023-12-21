@@ -12,5 +12,7 @@ paramiko==3.3.1
     #via https://pypi.org/project/paramiko/
 psycopg2==2.9.9
     #via https://www.psycopg.org/docs/install.html
-
-
+matplotlib==3.8.2
+    #via https://pypi.org/project/matplotlib/
+PyQtChart==5.15.6
+    #via https://pypi.org/project/PyQtChart/

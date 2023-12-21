@@ -1,0 +1,9 @@
+pip install psutil
+pip install get-mac
+pip install PyQt6
+pip install sphinx-rtd-theme
+pip install netifaces
+pip install paramiko
+pip install psycopg2-binary
+pip install matplotlib
+pip install PyQtChart
