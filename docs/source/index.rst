@@ -27,6 +27,7 @@ SAE 3.02 - Monitoring
    content/postgresql
    content/sphinx
    content/organisation
+   content/pyqt
    content/modules
 
 Indices et tables
