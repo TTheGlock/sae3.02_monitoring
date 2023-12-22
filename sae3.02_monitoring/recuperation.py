@@ -36,12 +36,10 @@ def recuperation_data():
 
     disque_total_gb = disque_total // (2**30)
     disque_used_gb = disque_used // (2**30)
-    disque_free_gb = disque_free // (2**30)
     charge_disk = disque_used_gb/disque_total_gb*100
     charge_disk = float("{:.2f}".format(charge_disk))
 
     #----- Réseau -----
-    adresse_mac = str(getmac.get_mac_address())
     ipv4 = str(ni.ifaddresses('eth0')[ni.AF_INET][0]['addr'])
 
     #----- data -----
