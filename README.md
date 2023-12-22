@@ -7,6 +7,8 @@ SAE 3.02, création d'une application graphique de monitoring d'ordinateurs.
 
 Il faut d'abord commencer par générer la documentation Sphinx, qui nous sera utile par la suite.
 
+Sphinx doit être installé ⚠️
+
 1. Se placer dans le répertoire principal `sae3.02_monitoring`
 2. Ouvrir un terminal dans ce répertoire
 3. Changez les droits d'exécution du programme bash : `chmod +x sphinx-build.sh`
