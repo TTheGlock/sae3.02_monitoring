@@ -1,4 +1,4 @@
-__version__ = '0.1.0'
+__version__ = '0.3.0'
 
 """ SAE 3.02 - Monitoring.
 
