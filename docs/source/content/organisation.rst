@@ -5,32 +5,52 @@ Organisation des fichiers
 Dans cette documentation, vous allez retrouver des explications sur les fichiers présents dans ce projet.
 
 --------------------------------------------
+Organisation des fichiers du dossier principal ``sae3.02_monitoring``
+--------------------------------------------
+
+.. code-block:: bash
+
+    └── sae3.02_monitoring
+        ├── client.py
+        ├── dashboard.py
+        ├── graph.py
+        └── recuperation.py
+
+* ``client.py`` = programme python utilisé pour ouvrir une connexion avec une base de données PostgreSQL et y insérer des données récupérées via le module ``recuperation_data`` du fichier ``recuperation.py``
+
+* ``dashboard.py`` = programme python utilisé pour ouvrir une connexion avec une base de données PostgreSQL, y récupérer des données, et les afficher graphiquement notamment par des graphiques via le module ``graph_1`` du fichier ``graph.py``
+
+* ``graph.py`` = programme python de création de graphique(s) | utilisé par le programme ``dashboard.py``
+
+* ``recuperation.py`` = programme python de récupération de caractéristiques de composants informatiques  | utilisé par le programme ``client.py``
+
+--------------------------------------------
 Organisation des fichiers du dossier ``docs``
 --------------------------------------------
 
 .. code-block:: bash
 
-    ─ docs
-    ├── build
-    │   └── not_empty.txt
-    ├── make.bat
-    ├── Makefile
-    └── source
-        ├── conf.py
-        ├── content
-        │   ├── cahier_des_charges.rst
-        │   ├── code.rst
-        │   ├── objectifs.rst
-        │   ├── organisation.rst
-        │   ├── postgresql.rst
-        │   ├── preinstallation.rst
-        │   └── sphinx.rst
-        ├── index.rst
-        ├── _static
-        │   ├── Diagramme_SAE.png
+    └── docs
+        ├── build
         │   └── not_empty.txt
-        └── _templates
-            └── not_empty.txt
+        ├── make.bat
+        ├── Makefile
+        └── source
+            ├── conf.py
+            ├── content
+            │   ├── cahier_des_charges.rst
+            │   ├── code.rst
+            │   ├── objectifs.rst
+            │   ├── organisation.rst
+            │   ├── postgresql.rst
+            │   ├── preinstallation.rst
+            │   └── sphinx.rst
+            ├── index.rst
+            ├── _static
+            │   ├── Diagramme_SAE.png
+            │   └── not_empty.txt
+            └── _templates
+                └── not_empty.txt
 
 * ``make.bat`` = fichier bat pour générer la configuration (ne pas utiliser, préférez ``sphinx_build.sh``) depuis Windows
 
